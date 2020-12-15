@@ -1,0 +1,31 @@
+<div class="table100 mb-4">
+    <form>
+      <div class="row">
+        <div class="col">
+          <input #rest name="restaurante"  type="text" [(ngModel)]="lista.restaurante" class="form-control" placeholder="Nombre del restaurante">
+        </div>
+        <div class="col">
+          <input #ciu name="ciudad"  type="text" [(ngModel)]="lista.ciudad" class="form-control" placeholder="Ciudad">
+        </div>
+        <div class="col">
+         <button (click)="validarDuplicado()" class="btn btn-primary">agregar</button>
+        </div>
+      </div>
+    </form>
+  </div>
+  <div class="table100">
+    <table>
+      <thead>
+        <tr class="table100-head">
+          <th class="column1">Restaurante</th>
+          <th class="column2">Ciudad</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr *ngFor="let lista of listas">
+            <td class="column1">{{lista.restaurante}}</td>
+            <td class="column2">{{lista.ciudad}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
